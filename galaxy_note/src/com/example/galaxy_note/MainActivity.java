@@ -11,17 +11,15 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	public final static String EXTRA_MESSAGE = "com.example.galaxy_note.MESSAGE";
+	public final static String EXTRA_MESSAGE = "com.example.babysteps.MESSAGE";
 	private TextView selectedDate;
 	//private DatePicker dpResult;
-	private Button btnChangeDate;
  
 	private int year;
 	private int month;
@@ -65,9 +63,9 @@ public class MainActivity extends Activity {
 	 
 		public void addListenerOnButton() {
 	 
-			btnChangeDate = (Button) findViewById(R.id.btnChangeDate);
+			selectedDate = (EditText) findViewById(R.id.editText1);
 	 
-			btnChangeDate.setOnClickListener(new OnClickListener() {
+			selectedDate.setOnClickListener(new OnClickListener() {
 	 
 				@Override
 				public void onClick(View v) {
@@ -129,9 +127,5 @@ public class MainActivity extends Activity {
 			intent.putExtra(EXTRA_MESSAGE, message);
 			startActivity(intent);
 		}
-		
 	};
-	
-	
-
 }
